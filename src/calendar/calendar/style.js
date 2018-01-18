@@ -7,16 +7,19 @@ export default function getStyle(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
     container: {
-      paddingLeft: 5,
-      paddingRight: 5,
       flex: 1,
       backgroundColor: appStyle.calendarBackground
     },
     week: {
-      marginTop: 7,
-      marginBottom: 7,
+      // marginTop: 7,
+      // marginBottom: 7,
       flexDirection: 'row',
-      justifyContent: 'space-around'
+      // borderWidth: 0.5,
+      // borderLeftWidth: 0,
+      // borderRightWidth: 0,
+      // borderColor: 'gray'
+      // justifyContent: 'space-around',
+      // backgroundColor: 'steelblue'
     },
     ...(theme[STYLESHEET_ID] || {})
   });

@@ -76,7 +76,6 @@ function page(xd, firstDayOfWeek) {
   if (isGTE(to, days[days.length - 1])) {
     after = fromTo(days[days.length - 1], to);
   }
-
   return before.concat(days.slice(1, days.length - 1), after);
 }
 

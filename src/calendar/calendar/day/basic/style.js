@@ -1,4 +1,4 @@
-import {StyleSheet, Platform} from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 import * as defaultStyle from '../../../style';
 
 const STYLESHEET_ID = 'stylesheet.day.basic';
@@ -7,12 +7,27 @@ export default function styleConstructor(theme={}) {
   const appStyle = {...defaultStyle, ...theme};
   return StyleSheet.create({
     base: {
-      width: 32,
-      height: 32,
-      alignItems: 'center'
+      width: appStyle.calendarWidth / 7,
+      height: appStyle.calendarWidth / 7,
+      alignItems: 'center',
+      // backgroundColor: 'chocolate',
+      justifyContent: 'center',
+      // borderWidth: 1,
+      // borderRightWidth: 1,
+      // borderColor: 'gray',
+    },
+    borderLeft: {
+      borderLeftWidth: 1,
+      borderLeftColor: 'gray'
+    },
+    blockStyle: {
+      margin: 0,
+      borderWidth: 2,
+      borderColor: '#F88881',
+      backgroundColor: '#FEC4C0',
     },
     text: {
-      marginTop: 4,
+      // marginTop: 4,
       fontSize: appStyle.textDayFontSize,
       fontFamily: appStyle.textDayFontFamily,
       fontWeight: '300',
@@ -22,32 +37,35 @@ export default function styleConstructor(theme={}) {
     alignedText: {
       marginTop: Platform.OS === 'android' ? 4 : 6
     },
-    selected: {
-      backgroundColor: appStyle.selectedDayBackgroundColor,
-      borderRadius: 16
-    },
     todayText: {
       color: appStyle.todayTextColor
-    },
-    selectedText: {
-      color: appStyle.selectedDayTextColor
     },
     disabledText: {
       color: appStyle.textDisabledColor
     },
-    dot: {
-      width: 4,
-      height: 4,
-      marginTop: 1,
-      borderRadius: 2,
-      opacity: 0
+    smallAppoint: {
+      width: (appStyle.calendarWidth - 200) / 7,
+      height: (appStyle.calendarWidth - 200) / 7,
+      borderRadius: (appStyle.calendarWidth - 200) / 14,
+      backgroundColor: appStyle.appointColor,
+      alignItems: 'center',
+      justifyContent: 'center',
     },
-    visibleDot: {
-      opacity: 1,
-      backgroundColor: appStyle.dotColor
+    mediumAppoint: {
+      width: (appStyle.calendarWidth - 100) / 7,
+      height: (appStyle.calendarWidth - 100) / 7,
+      borderRadius: (appStyle.calendarWidth - 100) / 14,
+      backgroundColor: appStyle.appointColor,
+      alignItems: 'center',
+      justifyContent: 'center',
     },
-    selectedDot: {
-      backgroundColor: appStyle.selectedDotColor
+    bigAppoint: {
+      width: appStyle.calendarWidth / 7,
+      height: appStyle.calendarWidth / 7,
+      borderRadius: appStyle.calendarWidth / 14,
+      backgroundColor: appStyle.appointColor,
+      alignItems: 'center',
+      justifyContent: 'center',
     },
     ...(theme[STYLESHEET_ID] || {})
   });

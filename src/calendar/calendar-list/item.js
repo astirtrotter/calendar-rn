@@ -21,9 +21,9 @@ class CalendarListItem extends Component {
       return (
         <Calendar
           theme={this.props.theme}
-          style={[{height: this.props.calendarHeight}, this.style.calendar]}
+          style={[{height: this.props.calendarHeight, width: this.props.calendarWidth}, this.style.calendar]}
           current={row}
-          hideArrows
+          hideArrows={false}
           hideExtraDays={this.props.hideExtraDays === undefined ? true : this.props.hideExtraDays}
           disableMonthChange
           markedDates={this.props.markedDates}
