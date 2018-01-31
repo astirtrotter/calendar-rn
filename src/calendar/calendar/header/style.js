@@ -37,8 +37,8 @@ export default function(theme={}) {
       marginTop: 7,
       flexDirection: 'row',
       justifyContent: 'space-around',
-      // borderBottomColor: 'gray',
-      // borderBottomWidth: 1,
+      borderBottomColor: 'gray',
+      borderBottomWidth: 0.5,
       width: appStyle.calendarWidth
     },
     dayHeader: {

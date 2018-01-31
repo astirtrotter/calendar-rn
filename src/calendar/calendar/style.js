@@ -14,10 +14,10 @@ export default function getStyle(theme={}) {
       // marginTop: 7,
       // marginBottom: 7,
       flexDirection: 'row',
-      // borderWidth: 0.5,
-      // borderLeftWidth: 0,
+      borderBottomWidth: 0.5,
+      // borderLeftWidth: 1,
       // borderRightWidth: 0,
-      // borderColor: 'gray'
+      borderColor: 'gray'
       // justifyContent: 'space-around',
       // backgroundColor: 'steelblue'
     },

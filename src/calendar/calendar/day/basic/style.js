@@ -9,22 +9,58 @@ export default function styleConstructor(theme={}) {
     base: {
       width: appStyle.calendarWidth / 7,
       height: appStyle.calendarWidth / 7,
-      alignItems: 'center',
+      // alignItems: 'center',
       // backgroundColor: 'chocolate',
-      justifyContent: 'center',
+      // justifyContent: 'center',
       // borderWidth: 1,
-      // borderRightWidth: 1,
-      // borderColor: 'gray',
+      borderRightWidth: 0.5,
+      borderColor: 'gray',
     },
     borderLeft: {
-      borderLeftWidth: 1,
+      borderLeftWidth: 0.5,
       borderLeftColor: 'gray'
+    },
+    noRightBorder: {
+      borderRightWidth: 0,
     },
     blockStyle: {
       margin: 0,
       borderWidth: 2,
       borderColor: '#F88881',
       backgroundColor: '#FEC4C0',
+    },
+    appointCircleContainer3: {
+      position: 'absolute',
+      bottom: 2,
+      left: 2,
+      right: 2,
+      flexDirection: 'row',
+      justifyContent: 'space-between'
+    },
+    appointCircleContainer: {
+      position: 'absolute',
+      bottom: 2,
+      left: 2,
+      right: 2,
+      flexDirection: 'row',
+      justifyContent: 'center'
+    },
+    appointCircle3: {
+      width: 10,
+      height: 10,
+      borderRadius: 5,
+      backgroundColor: '#fcfd03',
+      borderWidth: 0.5,
+      borderColor: appStyle.dayTextColor
+    },
+    appointCircle2: {
+      width: 10,
+      height: 10,
+      borderRadius: 5,
+      backgroundColor: '#fcfd03',
+      borderWidth: 0.5,
+      borderColor: appStyle.dayTextColor,
+      marginHorizontal: 2
     },
     text: {
       // marginTop: 4,

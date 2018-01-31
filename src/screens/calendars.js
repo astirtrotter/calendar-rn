@@ -7,7 +7,7 @@ import {
 import {Calendar} from './../calendar';
 
 const { width } = Dimensions.get('window');
-const calendarHeight = 370;
+const calendarHeight = 380;
 const calendarWidth = width - 30;
 const blockedDates = [
   '2018-01-06',
@@ -27,22 +27,22 @@ const blockedDates = [
   '2018-03-30',
 ];
 const appointDates = {
-  '2018-01-03': { count: 4 },
+  '2018-01-03': { count: 7 },
   '2018-01-10': { count: 3 },
-  '2018-01-11': { count: 2 },
+  '2018-01-11': { count: 4 },
   '2018-01-13': { count: 5 },
   '2018-01-14': { count: 1 },
-  '2018-01-15': { count: 5 },
+  '2018-01-15': { count: 6 },
   '2018-01-16': { count: 2 },
   '2018-01-17': { count: 2 },
-  '2018-01-22': { count: 2 },
+  '2018-01-22': { count: 4 },
   '2018-01-23': { count: 2 },
   '2018-02-02': { count: 2 },
   '2018-02-04': { count: 1 },
-  '2018-02-06': { count: 5 },
+  '2018-02-06': { count: 8 },
   '2018-04-12': { count: 2 },
   '2018-04-14': { count: 1 },
-  '2018-04-26': { count: 5 },
+  '2018-04-26': { count: 8 },
 };
 export default class CalendarsScreen extends Component {
   constructor(props) {
@@ -62,7 +62,6 @@ export default class CalendarsScreen extends Component {
             hideArrows={false}
             hideExtraDays={true}
             disableMonthChange
-            blockedDates={blockedDates}
             appointDates={appointDates}
             onDayPress={(value) => console.info('value', value)}
           />

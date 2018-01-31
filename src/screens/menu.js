@@ -20,6 +20,9 @@ export default class MenuScreen extends Component {
         <TouchableOpacity style={styles.menu} onPress={this.onAgendaPress.bind(this)}>
           <Text style={styles.menuText}>Agenda</Text>
         </TouchableOpacity>
+        <TouchableOpacity style={styles.menu} onPress={this.onCommunicationPress.bind(this)}>
+          <Text style={styles.menuText}>Communications</Text>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -42,6 +45,13 @@ export default class MenuScreen extends Component {
     this.props.navigator.push({
       screen: 'Agenda',
       title: 'Agenda'
+    });
+  }
+  
+  onCommunicationPress() {
+    this.props.navigator.push({
+      screen: 'RNCommunications',
+      title: 'RNCommunications'
     });
   }
 }
